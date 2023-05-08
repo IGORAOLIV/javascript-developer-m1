@@ -6,7 +6,7 @@
 const notas = [2, 7, 3, 8, 10, 4];
 let maiorNota = notas[0];
 
-for (let i = 0; i < notas.length; i++) {
+for (let i = 1; i < notas.length; i++) {
     if (notas[i] > maiorNota){
         maiorNota = notas[i];
     }
