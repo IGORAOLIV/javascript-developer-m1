@@ -18,5 +18,16 @@
 
 //         Saída:
 //             2050.00
-
 const { gets, print } = require('./funcoes-auxiliares-ex3');
+
+console.log(gets())
+
+const valoresAReceber = [2000, 250];
+let salarioLiquido = 0;
+
+for (let i = 0; i < valoresAReceber.length ; i++) {
+    salarioLiquido = salarioLiquido + valoresAReceber[i];
+    
+}
+
+print(salarioLiquido)

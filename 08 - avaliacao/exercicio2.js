@@ -17,3 +17,20 @@
 
 const { gets, print } = require('./funcoes-auxiliares-ex2');
 
+const numeros = gets();
+let maiorPar = -Infinity;
+let menorImpar = Infinity;
+
+for (let i = 0; i < numeros; i++) {
+  const numero = gets();
+
+  if (numero % 2 === 0 && numero > maiorPar) {
+    maiorPar = numero;
+  }
+
+  if (numero % 2 !== 0 && numero < menorImpar) {
+    menorImpar = numero;
+  }
+}
+console.log(`Maior número par: ${maiorPar}`);
+console.log(`Menor número ímpar: ${menorImpar}`);
