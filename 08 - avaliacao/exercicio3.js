@@ -20,14 +20,27 @@
 //             2050.00
 const { gets, print } = require('./funcoes-auxiliares-ex3');
 
-console.log(gets())
+const salarioBruto = gets();
+const valorBeneficios = gets();
 
-const valoresAReceber = [2000, 250];
-let salarioLiquido = 0;
-
-for (let i = 0; i < valoresAReceber.length ; i++) {
-    salarioLiquido = salarioLiquido + valoresAReceber[i];
-    
+function calcularPorcentagem(valor, percentual) {
+	return valor * (percentual / 100);
 }
 
-print(salarioLiquido)
+function pegarAliquota(salario) {
+	if (salario >= 0 && salario <= 1100) {
+		return 5;
+	} else if (salario > 1100 && salario <= 2500) {
+		return 10;
+	} else {
+		return 15;
+	}
+}
+
+const aliquotaImposto = pegarAliquota(salarioBruto);
+
+const valorDoImposto = calcularPorcentagem(salarioBruto, aliquotaImposto);
+
+const valorATransferir = salarioBruto - valorDoImposto + valorBeneficios;
+
+print(valorATransferir);
