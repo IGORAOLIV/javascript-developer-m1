@@ -16,7 +16,7 @@ const distanciaEmKm = 150;
 const combustivelEscolhido = "Gasolina";
 let custoTotal = 0;
 
-if (combustivelEscolhido) {
+if (combustivelEscolhido === "Etanol") {
   custoTotal = (distanciaEmKm / kmPorLitro) * valorGasolina;
   console.log(custoTotal.toFixed(2));
 } else {
