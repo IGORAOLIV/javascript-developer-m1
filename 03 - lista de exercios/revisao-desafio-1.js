@@ -8,15 +8,25 @@ Classificação:
 - Média acima de 7, passou de semestre; */
 
 const nota1 = 6;
-const nota2 = 1;
+const nota2 = 7;
 const nota3 = 7;
 
 const media = (nota1 + nota2 + nota3) / 3;
 
 if (media < 5) {
-  console.log("Reprovado");
+  console.log(
+    "A média neste semestre foi " +
+      media.toFixed(1) +
+      ", O aluno foi reprovado."
+  );
 } else if (media >= 5 && media <= 7) {
-  console.log("Recuperação");
+  console.log(
+    "A média neste semestre foi " +
+      media.toFixed(1) +
+      ", O aluno está em recuperação."
+  );
 } else {
-  console.log("Aprovado");
+  console.log(
+    "A média neste semestre foi " + media.toFixed(1) + ", O aluno foi aprovado."
+  );
 }
